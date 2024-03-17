@@ -1,13 +1,13 @@
 /* eslint-env mocha */
 
-var lib = require('../')
+const lib = require('../')
 
-var fs = require('fs')
-var path = require('path')
-var temp = require('fs-temp')
-var assert = require('assert')
+const fs = require('fs')
+const path = require('path')
+const temp = require('fs-temp')
+const assert = require('assert')
 
-var rawData = new Buffer(
+const rawData = new Buffer(
   'AAAAAAEqAAIAAApUZXN0IFRpdGxlAAAAAAAAAAAAAAAAAAAAAADO615USCsA' +
   'BQAAABMMVGVzdEJrZy50aWZmAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' +
   'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFM7rXlgAAAAAAAAAAP////8A' +
@@ -19,7 +19,7 @@ var rawData = new Buffer(
 
 describe('decode', function () {
   it('should parse a simple alias', function () {
-    var info = lib.decode(rawData)
+    const info = lib.decode(rawData)
 
     assert.equal(info.version, 2)
 
@@ -49,8 +49,8 @@ describe('decode', function () {
 
 describe('encode', function () {
   it('should encode a simple alias', function () {
-    var info = lib.decode(rawData)
-    var buf = lib.encode(info)
+    const info = lib.decode(rawData)
+    const buf = lib.encode(info)
 
     assert.deepEqual(rawData, buf)
   })
@@ -58,8 +58,8 @@ describe('encode', function () {
 
 describe('create', function () {
   it('should create a simple alias', function () {
-    var buf = lib.create(path.join(__dirname, 'basics.js'))
-    var info = lib.decode(buf)
+    const buf = lib.create(path.join(__dirname, 'basics.js'))
+    const info = lib.decode(buf)
 
     assert.equal('file', info.target.type)
     assert.equal('basics.js', info.target.filename)
@@ -67,7 +67,7 @@ describe('create', function () {
 })
 
 describe('isAlias', function () {
-  var aliasFile, garbageFile
+  let aliasFile, garbageFile
 
   before(function () {
     aliasFile = temp.writeFileSync(new Buffer('626f6f6b000000006d61726b00000000', 'hex'))
