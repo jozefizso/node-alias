@@ -15,7 +15,7 @@
   "devDependencies": {
     "fs-temp": "^1.1.1",
     "mocha": "^10.3.0",
-    "standard": "^8.3.0"
+    "standard": "^17.1.0"
   },
   "scripts": {
     "test": "standard && mocha"
