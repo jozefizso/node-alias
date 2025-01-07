@@ -18,7 +18,9 @@
     "standard": "^8.3.0"
   },
   "scripts": {
-    "test": "standard && mocha"
+    "test": "mocha",
+    "lint": "standard",
+    "lint:fix": "standard --fix"
   },
   "repository": {
     "type": "git",
