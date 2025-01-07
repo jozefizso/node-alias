@@ -1,0 +1,37 @@
+name: build
+
+on:
+  push:
+  pull_request:
+    branches:
+    - master
+    - main
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ macos-13, macos-15 ]
+        node: [ 12, 14, 16 ]
+
+    runs-on: ${{ matrix.os }}
+
+    name: build node v${{ matrix.node }} ${{ matrix.os }}
+
+    steps:
+    - name: checkout
+      uses: actions/checkout@v4
+
+    - name: setup node ${{ matrix.node }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node }}
+
+    - name: python version
+      run: python --version
+
+    - name: npm install
+      run: npm install
+
+    - name: npm tests
+      run: npm test
