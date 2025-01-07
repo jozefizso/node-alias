@@ -10,6 +10,7 @@ on:
 jobs:
   build:
     strategy:
+      fail-fast: false
       matrix:
         os: [ macos-13, macos-15 ]
         node: [ 12, 14, 16 ]
