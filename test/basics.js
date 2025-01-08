@@ -58,7 +58,8 @@ describe('encode', function () {
 
 describe('create', function () {
   it('should create a simple alias', function () {
-    var buf = lib.create(path.join(__dirname, 'basics.js'))
+    var rootDir = process.env['ROOT_VOLUME'] || __dirname
+    var buf = lib.create(path.join(rootDir, 'basics.js'))
     var info = lib.decode(buf)
 
     assert.equal('file', info.target.type)

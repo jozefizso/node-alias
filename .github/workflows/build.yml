@@ -31,10 +31,18 @@ jobs:
     - name: setup python 3.10
       uses: actions/setup-python@v5
       with:
-        python-version: '3.10' 
+        python-version: '3.10'
+
+    - name: prepare test volume
+      run: |
+        hdiutil create macos_alias_volume_hfs.dmg -ov -size 32m -fs HFS+ -volname "macos_alias"
+        hdiutil attach macos_alias_volume_hfs.dmg
+        cp test/basics.js /Volumes/macos_alias
 
     - name: npm install
       run: npm install
 
     - name: npm tests
       run: npm test
+      env:
+        ROOT_VOLUME: '/Volumes/macos_alias'
