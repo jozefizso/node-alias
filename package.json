@@ -26,5 +26,9 @@
   },
   "dependencies": {
     "nan": "^2.4.0"
+  },
+  "engines": {
+    "node": ">=10",
+    "npm": ">=7"
   }
 }

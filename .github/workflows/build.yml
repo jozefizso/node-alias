@@ -39,8 +39,8 @@ jobs:
         hdiutil attach macos_alias_volume_hfs.dmg
         cp test/basics.js /Volumes/macos_alias
 
-    - name: npm install
-      run: npm install
+    - name: npm ci
+      run: npm ci
 
     - name: npm tests
       run: npm test
