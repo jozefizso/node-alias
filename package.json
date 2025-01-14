@@ -9,9 +9,6 @@
     "Davide Liessi <davide.liessi@gmail.com>",
     "Joshua Warner <joshuawarner32@gmail.com>"
   ],
-  "os": [
-    "darwin"
-  ],
   "devDependencies": {
     "fs-temp": "^1.1.1",
     "mocha": "^3.1.0",
