@@ -1,5 +1,5 @@
 {
-  "name": "macos-alias",
+  "name": "@appdmg/macos-alias",
   "version": "0.2.12",
   "main": "index.js",
   "license": "MIT",
@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/LinusU/node-alias.git"
+    "url": "https://github.com/appdmg/macos-alias.git"
   },
   "dependencies": {
     "nan": "^2.4.0"
