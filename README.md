@@ -1,4 +1,4 @@
-# node-alias
+# @appdmg/node-alias
 
 Mac OS aliases creation and reading from node.js
 
@@ -11,13 +11,13 @@ I intend to add something like `alias.write(buf, path)` and `alias.read(path)`.
 ## Installation
 
 ```sh
-npm install macos-alias
+npm install @appdmg/macos-alias
 ```
 
 ## Usage
 
 ```javascript
-var alias = require('macos-alias');
+var alias = require('@appdmg/macos-alias');
 ```
 
 ## API
