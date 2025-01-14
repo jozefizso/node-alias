@@ -1,6 +1,6 @@
-# @appdmg/node-alias
+# @appdmg/macos-alias
 
-Mac OS aliases creation and reading from node.js
+Mac OS X aliases creation and reading from NodeJS.
 
 ## Attention
 
