@@ -8,6 +8,17 @@ This library does currently not handle the `book\0\0\0\0mark\0\0\0\0`-header. It
 
 I intend to add something like `alias.write(buf, path)` and `alias.read(path)`.
 
+
+## Requirements
+
+To install and run the `macos-alias` package you need:
+
+* Mac OS X 10.11 or newer 
+* macOS 11 or newer
+* NodeJS 10 or newer
+* Python 3.10
+
+
 ## Installation
 
 ```sh

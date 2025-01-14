@@ -13,7 +13,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ macos-13 ]
-        node: [ 12, 14, 16 ]
+        node: [ 10, 12, 14, 16, 18, 20, 22 ]
 
     runs-on: ${{ matrix.os }}
 
@@ -39,8 +39,8 @@ jobs:
         hdiutil attach macos_alias_volume_hfs.dmg
         cp test/basics.js /Volumes/macos_alias
 
-    - name: npm install
-      run: npm install
+    - name: npm ci
+      run: npm ci
 
     - name: npm tests
       run: npm test
