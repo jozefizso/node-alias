@@ -6,7 +6,11 @@
 #ifdef __APPLE__
 #include "impl-apple.cc"
 #else
-#error This platform is not implemented yet
+
+NAN_METHOD(MethodGetVolumeName) {
+  info.GetReturnValue().SetNull();
+}
+
 #endif
 
 using v8::FunctionTemplate;

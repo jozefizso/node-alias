@@ -59,7 +59,8 @@ describe('encode', function () {
 describe('create', function () {
   it('should create a simple alias', function () {
     var rootDir = process.env['ROOT_VOLUME'] || __dirname
-    var buf = lib.create(path.join(rootDir, 'basics.js'))
+    var volumeName = process.platform === 'darwin' ? undefined : 'Test Volume'
+    var buf = lib.create(path.join(rootDir, 'basics.js'), { volumeName })
     var info = lib.decode(buf)
 
     assert.equal('file', info.target.type)
