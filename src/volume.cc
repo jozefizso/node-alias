@@ -8,7 +8,7 @@
 #else
 
 NAN_METHOD(MethodGetVolumeName) {
-  info.GetReturnValue().Set(Nan::New("Macintosh HD").ToLocalChecked());
+  info.GetReturnValue().SetNull();
 }
 
 #endif
